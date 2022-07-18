@@ -6,7 +6,10 @@ export default function NavBar() {
         <header className="header">
             <div>
                 <nav>
-                    <NavLink to="/" exact className="nav-item">
+                    <NavLink to="/" exact 
+                    activeClassName="text-white"
+                    className="nav-item"
+                    >
                         Virtual Guide
                     </NavLink>
                     <NavLink to="/post" className="nav-item">

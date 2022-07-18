@@ -1,5 +1,7 @@
 import React from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './App.scss'
+import { BrowserRouter, Route, Switch, Routes } from 'react-router-dom';
 import Home from "./components/Home";
 import About from "./components/About";
 import SinglePost from "./components/SinglePost";
@@ -10,6 +12,16 @@ import NavBar from "./components/NavBar"
 
 function App() {
   return (
+    // <BrowserRouter>
+    // <NavBar />
+    //   <Routes>
+    //     <Route element={<Home />} path='/' />
+    //     <Route element={<About />} path='/about' />
+    //     <Route element={<SinglePost />} path='/post/:slug' />
+    //     <Route element={<Post />} path='/post' />
+    //     <Route element={<Project />} path='/project' />
+    //   </Routes>
+    // </BrowserRouter>
     <BrowserRouter>
     <NavBar />
       <Switch>
