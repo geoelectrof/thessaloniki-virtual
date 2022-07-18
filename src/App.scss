@@ -1,3 +1,6 @@
+@import "custom";
+// @import "~bootstrap/scss/bootstrap";
+
 .App {
   text-align: center;
 }
@@ -38,6 +41,6 @@
 }
 
 header {
-  color: red;
-  background-color: red;
+  color: rgb(255, 123, 0);
+  background-color: rgba(165, 125, 125, 0.61);
 }
