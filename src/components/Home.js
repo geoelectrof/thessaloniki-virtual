@@ -1,6 +1,7 @@
-import React from "react"
-import { Button, Container, Row, Col, Image } from "react-bootstrap"
-import { GiTowerFlag } from 'react-icons/gi'
+import React from "react";
+import { Button, Container, Row, Col, Image } from "react-bootstrap";
+import { GiTowerFlag } from 'react-icons/gi';
+import skgMap from "./images\\thessaloniki-map-bw.jpg";
 
 export default function Home() {
     return  (
@@ -24,31 +25,46 @@ export default function Home() {
                 <Col></Col>
                 </Row>
                 <Row className="mt-5">
-                    <h2 className="text-center display-5">SAMPLES</h2>
+                    <h2 className="text-center display-4">SAMPLES</h2>
                 </Row>
-                <Row className="my-5">
-                    <Col>
+                <Row className = "my-5 align-items-center text-center">
+                    <Col md={6}>
                         <Image src="https://picsum.photos/600/400" className = "img-fluid" />
                     </Col>
-                    <Col>
-                        <h3>Museum</h3>
-                        <p>
+                    < Col md={6} className = "p-5" >
+                        <h3 className="h1 display-5 text-primary">Museum</h3>
+                        <p className="text-secondary">
                             A supplement to the North Capet;
                             the end point Havøysund and the islands beyond offer a encounter with a thriving community on the coast of Finnmark.
                         </p>
                     </Col>
                 </Row>
                 < Row className = "my-5" >
-                    <Col>
+                    <Col md={{order: 'last', span:6}}>
+                        <Image src="https://picsum.photos/600/400" className = "img-fluid" />
+                    </Col>
+                    <Col md={{order: 'first', span: 6}}>
                         <h3>Museum</h3>
                         <p>
                             A supplement to the North Capet;
                             the end point Havøysund and the islands beyond offer a encounter with a thriving community on the coast of Finnmark.
                         </p>
                     </Col>
-                    <Col>
-                        <Image src="https://picsum.photos/600/400" className = "img-fluid" />
+                </Row>
+                <Row className = "bg-light my-5 align-items-center text-center py-5" >
+                    <Col md={{order: 'last', span:6}}>
+                        <Image src={skgMap} alt="thessaloniki-map" className="img-fluid" width="400px"/>
                     </Col>
+                    <Col className="p-5 text-center" md={{order: 'first', span:6}}>
+                        <h3 className = "display-5"> The 18 Norwegian Scenic Routes </h3>
+                        <p className="text-secondary">
+                            Norwegian Scenic Routes are roads that run through unique Norwegian nature. Along the roads you will find artworks, viewpoints and rest areas with innovative architecture in beautiful landscapes.
+                        </p>
+                        <Button variant="lg" className="bg-primary text-white rounded-0 px-5 py-2">View All Places</Button>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col></Col>
                 </Row>
 
             </Container>

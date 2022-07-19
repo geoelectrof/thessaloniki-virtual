@@ -44,3 +44,17 @@ header {
   color: rgb(255, 123, 0);
   background-color: rgba(165, 125, 125, 0.61);
 }
+
+
+.custom-class {
+  display: none;
+}
+@include media-breakpoint-up(sm) {
+  .custom-class {
+    display: block;
+  }
+}
+
+Button {
+  border-radius: 0;
+}
