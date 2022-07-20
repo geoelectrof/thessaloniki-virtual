@@ -1,0 +1,41 @@
+// .teaser-block {
+//     position: relative;
+// }
+
+// .teaser-block-image {
+//     // background-image: url('https://picsum.photos/1320/600');
+//     height: 570px;
+//     width: 1440px;
+//     object-fit: cover;
+// }
+
+// .teaser-block-content {
+//     position: absolute;
+//     top: 20%;
+//     left: 0;
+//     right: 0;
+//     background-color: white;
+//     padding: 20px;
+//     width: 200px;
+//     margin: auto;
+// }
+
+
+
+
+// @include media-breakpoint-up(sm) {
+//   .teaser-block-content {
+//     position: relative;
+//   }
+// }
+
+// .custom-class {
+//   display: none;
+// }
+// @include media-breakpoint-up(sm) {
+//   .custom-class {
+//     display: block;
+//   }
+// }
+
+// @import "~bootstrap/scss/bootstrap";
