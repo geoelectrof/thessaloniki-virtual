@@ -8,7 +8,7 @@ export default function Home() {
         <main>
             <Container fluid>
                 <Col>
-                    <h1 className="text-center mt-5"><GiTowerFlag size="2em" className="primary"/></h1>
+                    <h1 className="text-center mt-5"><GiTowerFlag size="2em" className="text-primary"/></h1>
                     <h1 className="display-2 text-center mb-5">Must see places in Thessaloniki</h1>
                     {/* <img src = "https://picsum.photos/1140/480" alt="thessaloniki" className="shadow-4" /> */}
                     <Image src="https://picsum.photos/1440/480" className="img-fluid"/>
