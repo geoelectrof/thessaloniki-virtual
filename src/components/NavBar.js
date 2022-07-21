@@ -33,12 +33,12 @@ export default function NavBar() {
                                 className="nav-item nav-link">
                                     HIGHLIGHTS
                             </NavLink>
-                            <NavLink 
+                            {/* <NavLink 
                                 to = "/project"
                                 activeClassName = "text-primary"
                                 className = "nav-item nav-link" >
                                     PROJECTS
-                            </NavLink>
+                            </NavLink> */}
                             <NavLink 
                                 to = "/about" 
                                 activeClassName = "text-primary"
