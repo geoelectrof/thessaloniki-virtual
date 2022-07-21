@@ -5,6 +5,10 @@ import imageUrlBuilder from "@sanity/image-url"
 import BlockContent from "@sanity/block-content-to-react"
 import { Container, Image, Row, Col, Button } from "react-bootstrap"
 import thessalonikiView from "./images\\thessaloniki-view.jpg"
+import { FaWheelchair } from "react-icons/fa"
+import { ImManWoman } from "react-icons/im"
+import { ImLocation } from "react-icons/im"
+
 
 const builder = imageUrlBuilder(sanityClient);
 function urlFor(source) {
@@ -47,23 +51,53 @@ export default function SinglePost() {
                     </header>
                     <Image src={thessalonikiView}  width="1440px" className="d-block m-auto img-fluid"/>
                     <section>
-                    <Row>
-                        <Col></Col>
-                        <Col lg={6} className="">
+                    <Row className="justify-content-center  pb-5">
+                        
+                        <Col lg={6}>
                             <p className="lead mt-5"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
-                            <Button> Press </Button>
                         </Col>
-                        <Col></Col>
+                        
+                    </Row>
+                </section>
+                < section className = "bg-light my-5" >
+                    <Row className="justify-content-center ">
+                        <Col lg={6}>
+                            <h2 className="font-weight-lighter text-center display-5 py-5 text-primary">
+                                Useful Info
+                            </h2>
+                        </Col>
+                    </Row>
+                    <Row className="justify-content-center text-center pb-5">
+                        <Col lg={2} className="mb-3">
+                            <ImLocation size="3rem" />
+                            <h3 className="h4">GPS</h3>
+                            <p>70.69444912, 24.67410824</p>
+                        </Col>
+                        <Col lg={2} className="mb-3">
+                            <FaWheelchair size="3rem" className=""/>
+                            <h3 className="h4">ACCESSIBILITY</h3>
+                            <p>Partially wheelchair accessible.</p>
+                        </Col>
+                        <Col lg={2} className="mb-3">
+                            <ImManWoman size="3rem" />
+                            <h3 className="h4">TOILETS</h3>
+                            <p>Toilet facilities available</p>
+                        </Col>
                     </Row>
                 </section>
                 <section>
-                    <Row>
-                        <h2 className="font-weight-lighter">Useful Info</h2>
-                    </Row>
-                    <Row>
-                        <Col></Col>
-                        <Col></Col>
-                        <Col></Col>
+                    <Row className="justify-content-center">
+                        <Col lg={6}>
+                            <h2 className="font-weight-lighter text-center display-5 py-5 text-primary">
+                                Useful Links
+                            </h2>
+                            <h3 className="h5">Archeological Museum of Thessaloniki</h3>
+                            <a href="#" className="link-secondary">www.archaeology.gr</a>
+                            <hr />
+                            <h3 className="h5">Archeological Museum of Thessaloniki</h3>
+                            <a href="#" className="link-secondary">www.archaeology.gr</a>
+                            <hr />
+                        </Col>
                     </Row>
                 </section>
                 </Container>
