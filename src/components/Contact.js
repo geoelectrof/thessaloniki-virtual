@@ -90,53 +90,53 @@ export default function Contact() {
 //         return (
 //     <>
 
-//     <Container>
-//         <Row className="justify-content-md-center">
-//             <Col md={6}>
-//                 <div className="card shadow-sm border-0 px-3 rounded-2 mb-3 py-4 mx-auto mt-5 bg-light">
-//                     <div className="card-header bg-transparent border-0 text-center text-uppercase"><h3>{this.props.title}</h3></div>
-//                     <div className="card-body">
-//                     <form name="contact-form" method="POST" netlify onSubmit={(e) => this.handleSubmit(e)} encType="multipart/form-data" autoComplete="off">
-//                         <div className="form-group">
-//                         <label className="mb-0">Your name<span className="text-danger">*</span></label>
-//                         <input name="name" type="text" className="form-control" placeholder="Name" value={this.state.name} onChange={this.handleChange} onBlur={this.handleBlur} />
-//                         { nameError
-//                             ? <div className="alert alert-danger mt-2">Name is a required field.</div>
-//                             : ''
-//                         }
-//                         </div>
-//                         <div className="form-group">
-//                         <label className="mb-0">Your email<span className="text-danger">*</span></label>
-//                         <input name="email" type="email" className="form-control" placeholder="Email" value={this.state.email} onChange={this.handleChange} onBlur={this.handleBlur} />
-//                         { emailError
-//                             ? <div className="alert alert-danger mt-2">Email is a required field.</div>
-//                             : ''
-//                         }
-//                         { emailError2
-//                             ? <div className="alert alert-danger mt-2">Email invalid.</div>
-//                             : ''
-//                         }
-//                         </div>
-//                         <div className="form-group">
-//                         <label className="mb-0">Your phone number (Optional)</label>
-//                         <input name="contact" type="text" className="form-control" placeholder="Contact" onChange={this.handleChange} value={this.state.contact}  />
-//                         </div>
-//                         <div className="form-group">
-//                         <label className="mb-0">Message<span className="text-danger">*</span></label>
-//                         <textarea name="message" type="text" className="form-control" placeholder="Message" value={this.state.message} onChange={this.handleChange} onBlur={this.handleBlur} />
-//                         { messageError
-//                             ? <div className="alert alert-danger mt-2">Message is a required field.</div>
-//                             : ''
-//                         }
-//                         </div>
-//                         <p className="text-center mb-0 mt-5"><input type="submit" className="btn btn-primary btn-lg w-100 text-uppercase text-white" value="Submit Now" /></p>
-//                     </form>
+    // <Container>
+    //     <Row className="justify-content-md-center">
+    //         <Col md={6}>
+    //             <div className="card shadow-sm border-0 px-3 rounded-2 mb-3 py-4 mx-auto mt-5 bg-light">
+    //                 <div className="card-header bg-transparent border-0 text-center text-uppercase"><h3>{this.props.title}</h3></div>
+    //                 <div className="card-body">
+    //                 <form name="contact-form" method="POST" netlify onSubmit={(e) => this.handleSubmit(e)} encType="multipart/form-data" autoComplete="off">
+    //                     <div className="form-group">
+    //                     <label className="mb-0">Your name<span className="text-danger">*</span></label>
+    //                     <input name="name" type="text" className="form-control" placeholder="Name" value={this.state.name} onChange={this.handleChange} onBlur={this.handleBlur} />
+    //                     { nameError
+    //                         ? <div className="alert alert-danger mt-2">Name is a required field.</div>
+    //                         : ''
+    //                     }
+    //                     </div>
+    //                     <div className="form-group">
+    //                     <label className="mb-0">Your email<span className="text-danger">*</span></label>
+    //                     <input name="email" type="email" className="form-control" placeholder="Email" value={this.state.email} onChange={this.handleChange} onBlur={this.handleBlur} />
+    //                     { emailError
+    //                         ? <div className="alert alert-danger mt-2">Email is a required field.</div>
+    //                         : ''
+    //                     }
+    //                     { emailError2
+    //                         ? <div className="alert alert-danger mt-2">Email invalid.</div>
+    //                         : ''
+    //                     }
+    //                     </div>
+    //                     <div className="form-group">
+    //                     <label className="mb-0">Your phone number (Optional)</label>
+    //                     <input name="contact" type="text" className="form-control" placeholder="Contact" onChange={this.handleChange} value={this.state.contact}  />
+    //                     </div>
+    //                     <div className="form-group">
+    //                     <label className="mb-0">Message<span className="text-danger">*</span></label>
+    //                     <textarea name="message" type="text" className="form-control" placeholder="Message" value={this.state.message} onChange={this.handleChange} onBlur={this.handleBlur} />
+    //                     { messageError
+    //                         ? <div className="alert alert-danger mt-2">Message is a required field.</div>
+    //                         : ''
+    //                     }
+    //                     </div>
+    //                     <p className="text-center mb-0 mt-5"><input type="submit" className="btn btn-primary btn-lg w-100 text-uppercase text-white" value="Submit Now" /></p>
+    //                 </form>
                     
-//                     </div>
-//                 </div>
-//             </Col>
-//         </Row>
-//     </Container>  
+    //                 </div>
+    //             </div>
+    //         </Col>
+    //     </Row>
+    // </Container>  
 //       </>
 //       );
 //         } else {
@@ -152,20 +152,52 @@ export default function Contact() {
   
 
     // <ContactForm />
-    <form name="contact" method="post">
-          <input type="hidden" name="form-name" value="contact" />
-          <p>
-            <label>Your Name: <input type="text" name="name"/></label>
-          </p>
-          <p>
-            <label>Your Email: <input type="email" name="email"/></label>
-          </p>
-          <p>
-            <label>Message: <textarea name="message"></textarea></label>
-          </p>
-          <p>
-            <button type="submit">Send</button>
-          </p>
-    </form>
+    <Container>
+        <header className="text-center pt-5">
+            <h1 className="h1 display-2 text-primary pb-3 samples-title">
+                <span className="">Contact</span>
+            </h1>
+        </header>
+        <Row className="justify-content-md-center">
+            <Col md={5}>
+                <div className="card shadow-sm border-0 px-3 rounded-2 mb-3 py-4 mx-auto mt-5 bg-light">
+                    <div className="card-header bg-transparent border-0 text-center text-uppercase">
+                        <h3 className="h2 text-primary">Send us a message</h3>
+                    </div>
+                    <div className="card-body">
+                        <form name="contact" method="post">
+                            <div className = "form-group" >
+                                
+                                <input type="hidden" name="form-name" value="contact" />
+
+                                {/* <p>
+                                    <label>Your Name: <input type="text" name="name"/></label>
+                                </p> */}
+                                <label className="mb-0"><span className="text-danger">Your name*</span></label>
+                                <input name="name" type="text" className="form-control" placeholder="Name" />
+                                
+                                {/* <p>
+                                    <label>Your Email: <input type="email" name="email"/></label>
+                                </p> */}
+                                <label className="mb-0 mt-3"><span className="text-danger">Your Email*</span></label>
+                                <input name="email" type="email" className="form-control" placeholder="Email" />
+                                
+                                {/* <p>
+                                    <label>Message: <textarea name="message"></textarea></label>
+                                </p> */}
+                                <label className="mb-0 mt-3"><span className="text-danger">Your message</span></label>
+                                <textarea name="message" type="text" className="form-control" placeholder="Message" />
+                                
+                                <p>
+                                    <button type="submit" className="btn btn-primary btn-lg w-100 text-uppercase text-white mt-3" >Send message</button>
+                                </p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </Col>
+        </Row>
+    </Container>
+
     )
 }
