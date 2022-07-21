@@ -4,7 +4,7 @@ import { GiTowerFlag } from 'react-icons/gi';
 import skgMap from "./images\\thessaloniki-map-bw.jpg";
 import whiteTower from "./images\\Thessaloniki-white-tower.jpg"
 import thessalonikiView from "./images\\thessaloniki-view.jpg"
-import "./home.scss"
+
 
 export default function Home() {
     return  (
