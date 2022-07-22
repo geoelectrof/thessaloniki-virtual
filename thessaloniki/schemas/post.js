@@ -47,6 +47,16 @@ export default {
       title: 'Body',
       type: 'blockContent',
     },
+    {
+      name: 'tags',
+      title: 'Tags',
+      type: 'array',
+      of: [{
+        name: 'tag',
+        title: 'Tag',
+        type: 'string'
+      }]
+    },
   ],
 
   preview: {

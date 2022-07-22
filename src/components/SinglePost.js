@@ -1,8 +1,10 @@
 import React, { useEffect, useState} from "react";
 import { useParams } from "react-router-dom";
+
 import sanityClient from "../client.js";
 import imageUrlBuilder from "@sanity/image-url"
 import BlockContent from "@sanity/block-content-to-react"
+
 import { Container, Image, Row, Col, Button } from "react-bootstrap"
 import thessalonikiView from "./images\\thessaloniki-view.jpg"
 import { FaWheelchair } from "react-icons/fa"
@@ -96,7 +98,7 @@ export default function SinglePost() {
                             <hr />
                             <h3 className="h5">Archeological Museum of Thessaloniki</h3>
                             <a href="#" className="link-secondary">www.archaeology.gr</a>
-                            <hr />
+                            
                         </Col>
                     </Row>
                 </section>
