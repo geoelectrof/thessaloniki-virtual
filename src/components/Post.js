@@ -94,7 +94,7 @@ export default function Post() {
                 ))}
             </div>
 
-            < Row className = "my-5 align-items-center" >
+            {/* < Row className = "my-5 align-items-center" >
                 <Col md={{span: 6}} className="py-3 px-5">
                     <p className="mb-0 text-secondary samples-sub-title">MONUMENTS</p>
                     <h3 className="h1 display-5 text-primary pb-3 samples-title"><span className="border-bottom border-2 border-primary">Museum</span></h3>
@@ -103,13 +103,16 @@ export default function Post() {
                         the end point Havøysund and the islands beyond offer a encounter with a thriving community on the coast of Finnmark.
                     </p>
                     <p className="pt-3 pb-0">
-                        <FaWheelchair size="1.3rem" className="text-secondary" /> <span className="text-secondary">Partially wheelchair accessible.</span>
+                        <FaWheelchair size="1.3rem" className="text-secondary" /> 
+                        <span className="text-secondary">
+                            Partially wheelchair accessible.
+                        </span>
                     </p>
                 </Col>
                 <Col md={{span:6}}>
                     <Image src="https://picsum.photos/600/300" className = "img-fluid" />
                 </Col>
-            </Row>
+            </Row> */}
 
             <motion.div
                 animate={animateCard}
@@ -117,58 +120,44 @@ export default function Post() {
                 className="app__work-portfolio"
             >
                 {filterWork.map((work, index) => (
-                <div className="app__work-item app__flex" key={index}>
-                    <div
-                    className="app__work-img app__flex"
-                    >
-                    <img src={urlFor(work.mainImage)} alt={work.name} width="400px"/>
+                <Row key={index} className="py-5 border-bottom border-2 border-dark" >
+                    {/* <div className="app__work-item app__flex" key={index}> */}
 
-                    {/* <motion.div
-                        whileHover={{ opacity: [0, 1] }}
-                        transition={{ duration: 0.25, ease: 'easeInOut', staggerChildren: 0.5 }}
-                        className="app__work-hover app__flex"
-                    >
-                        <a href={work.projectLink} target="_blank" rel="noreferrer">
+                        {/* <div className="app__work-content app__flex"> */}
+                            <Col md={6} className="py-3 pe-5 mr-5">
+                                {/* <img
+                                    src={work.mainImage.asset.url}
+                                    alt={work.mainImage.alt}
+                                    width="200px"
+                                /> */}
+                                {/* {console.log(work.mainImage.asset.url)} */}
+                                {/* <div className="app__work-tag app__flex"> */}
+                                <p className="mb-0 text-secondary samples-sub-title">{work.tags[0]}</p>
+                                {/* </div> */}
+                                <Link to={"/post/" + work.slug.current} key={work.slug.current} className="text-decoration-none">
+                                    <h3 className="h1 display-5 text-primary pb-3 samples-title">
+                                        <span className="border-bottom border-2 border-primary pb-1">
+                                            {work.title}
+                                        </span>
+                                    </h3>
+                                </Link>
+                                <p className="p-text" style={{ marginTop: 10 }}>{work.description}</p>
+                                <p className="pt-3 pb-0">
+                                    <FaWheelchair size="1.2rem" className="text-secondary mr-5" />
+                                    <span className="text-secondary ps-2 ">
+                                        {work.wheelchairAccess} 
+                                    </span>
+                                </p>
+                            </Col>
+                            <Col md={6}>
+                                <div className="app__work-img app__flex">
+                                    <img src={urlFor(work.mainImage)} alt={work.name} className="img-fluid" />
+                                </div>
 
-                        <motion.div
-                            whileInView={{ scale: [0, 1] }}
-                            whileHover={{ scale: [1, 0.90] }}
-                            transition={{ duration: 0.25 }}
-                            className="app__flex"
-                        >
-                            <AiFillEye />
-                        </motion.div>
-                        </a>
-                        <a href={work.codeLink} target="_blank" rel="noreferrer">
-                        <motion.div
-                            whileInView={{ scale: [0, 1] }}
-                            whileHover={{ scale: [1, 0.90] }}
-                            transition={{ duration: 0.25 }}
-                            className="app__flex"
-                        >
-                            <AiFillGithub />
-                        </motion.div>
-                        </a>
-                    </motion.div> */}
-                    </div>
-
-                    <div className="app__work-content app__flex">
-                        <img
-                            src={work.mainImage.asset.url}
-                            alt={work.mainImage.alt}
-                            width="200px"
-                        />
-                        {/* {console.log(work.mainImage.asset.url)} */}
-                        <Link to={"/post/" + work.slug.current} key={work.slug.current}>
-                            <h4 className="bold-text">{work.title}</h4>
-                        </Link>
-                        <p className="p-text" style={{ marginTop: 10 }}>{work.description}</p>
-
-                        <div className="app__work-tag app__flex">
-                            <p className="p-text">{work.tags[0]}</p>
-                        </div>
-                    </div>
-                </div>
+                            </Col>
+                        {/* </div> */}
+                    {/* </div> */}
+                </Row>
                 ))}
             </motion.div>
             
