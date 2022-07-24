@@ -10,6 +10,8 @@ import thessalonikiView from "./images\\thessaloniki-view.jpg"
 import { FaWheelchair } from "react-icons/fa"
 import { ImManWoman } from "react-icons/im"
 import { ImLocation } from "react-icons/im"
+import { FiExternalLink } from "react-icons/fi";
+
 
 
 const builder = imageUrlBuilder(sanityClient);
@@ -49,8 +51,15 @@ export default function SinglePost() {
             
               return  (
                 <div>
-                    <h3 className="h5">{singlePost.usefulLinks[0].linkTitle}</h3>
-                    <a href="#" className="link-secondary">{singlePost.usefulLinks[0].linkUrl}</a>
+                    <h3 className="h5">{singlePost.usefulLinks[i].linkTitle}</h3>
+                    <a 
+                        href={singlePost.usefulLinks[i].linkUrl} 
+                        target="_blank" 
+                        rel = "noopener noreferrer"
+                        className="link-secondary">
+                            {singlePost.usefulLinks[i].linkUrl}
+                        </a>
+                           <span className="link-secondary"> <FiExternalLink /></span>
                     <hr />
                 </div>
               )
