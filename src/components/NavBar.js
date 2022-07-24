@@ -5,40 +5,41 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import { GiTowerFlag } from 'react-icons/gi';
+import {LinkContainer} from 'react-router-bootstrap'
+
 
 export default function NavBar() {
     return (
-        <header className="header">
             <div>
-                <Navbar bg="light" expand="lg">
+                {/* <Navbar collapseOnSelect bg="light" expand="lg">
                     <Container>
                         <Navbar.Brand href="#home">
                             <GiTowerFlag size="1.5em" className="text-primary"/>
                             Thessaloniki Virtual Guide
                         </Navbar.Brand>
-                        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                        <Navbar.Collapse id="basic-navbar-nav">
+                        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                        <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="ms-auto">
-                            {/* <Nav.Link href="#home"> */}
+                            <Nav.Link href="#home">
                             <NavLink 
                                 to = "/" exact
                                 activeClassName = "text-primary"
                                 className = "nav-item nav-link" >
                                     HOME 
                             </NavLink>
-                            {/* </Nav.Link> */}
+                            </Nav.Link>
                             <NavLink 
                                 to="/post" 
                                 activeClassName = "text-primary"
                                 className="nav-item nav-link">
                                     HIGHLIGHTS
                             </NavLink>
-                            {/* <NavLink 
+                            <NavLink 
                                 to = "/project"
                                 activeClassName = "text-primary"
                                 className = "nav-item nav-link" >
                                     PROJECTS
-                            </NavLink> */}
+                            </NavLink>
                             <NavLink 
                                 to = "/about" 
                                 activeClassName = "text-primary"
@@ -53,7 +54,7 @@ export default function NavBar() {
                             </NavLink>
 
 
-                            {/* <NavDropdown title="Dropdown" id="basic-nav-dropdown">
+                            <NavDropdown title="Dropdown" id="basic-nav-dropdown">
                             <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                             <NavDropdown.Item href="#action/3.2">
                                 Another action
@@ -63,11 +64,82 @@ export default function NavBar() {
                             <NavDropdown.Item href="#action/3.4">
                                 Separated link
                             </NavDropdown.Item>
-                            </NavDropdown> */}
+                            </NavDropdown>
                         </Nav>
                         </Navbar.Collapse>
                     </Container>
-                    </Navbar>
+                    </Navbar> */}
+                    <Navbar collapseOnSelect expand="lg" bg="light">
+                        <Container>
+                            {/* <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand> */}
+                            <LinkContainer 
+                                to = "/"
+                                exact 
+                                // activeClassName = "text-primary"
+                                // className = "nav-item nav-link"
+                                >
+                             <Navbar.Brand href="#home">
+                                <GiTowerFlag size="1.5em" className="text-primary"/>
+                                Thessaloniki Virtual Guide
+                            </Navbar.Brand>
+                            </LinkContainer>
+                            <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                            <Navbar.Collapse id="responsive-navbar-nav">
+                            {/* <Nav className="me-auto">
+
+                                
+                                
+                                <Nav.Link href="#pricing">Pricing</Nav.Link>
+                                <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
+                                <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+                                <NavDropdown.Item href="#action/3.2">
+                                    Another action
+                                </NavDropdown.Item>
+                                <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+                                <NavDropdown.Divider />
+                                <NavDropdown.Item href="#action/3.4">
+                                    Separated link
+                                </NavDropdown.Item>
+                                </NavDropdown>
+                            </Nav> */}
+                            <Nav className="ms-auto">
+                                <LinkContainer 
+                                    to = "/"
+                                    exact 
+                                    activeClassName = "text-primary"
+                                    className = "nav-item nav-link">
+                                    <Nav.Link >
+                                            HOME 
+                                    </Nav.Link>
+                                </LinkContainer>
+                                <LinkContainer 
+                                    to="/post" 
+                                    activeClassName = "text-primary"
+                                    className="nav-item nav-link">
+                                    <Nav.Link>
+                                        HIGHLIGHTS
+                                    </Nav.Link>
+                                </LinkContainer>
+                                <LinkContainer 
+                                    to = "/about" 
+                                    activeClassName = "text-primary"
+                                    className = "nav-item nav-link" >
+                                    <Nav.Link>
+                                        ABOUT 
+                                    </Nav.Link>
+                                </LinkContainer>
+                                <LinkContainer 
+                                    to = "/contact" 
+                                    activeClassName = "text-primary"
+                                    className = "nav-item nav-link" >
+                                    <Nav.Link>
+                                        CONTACT 
+                                    </Nav.Link>
+                                </LinkContainer>
+                            </Nav>
+                            </Navbar.Collapse>
+                        </Container>
+                        </Navbar>
                 
                 {/* <nav class="navbar navbar-expand-lg navbar-light bg-light">
                     <div class="container-fluid">
@@ -140,6 +212,5 @@ export default function NavBar() {
                     </div>
                 </nav> */}
             </div>
-        </header>
     )
 }

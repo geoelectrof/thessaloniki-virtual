@@ -23,6 +23,38 @@ export default function Project() {
         .catch(console.error);
     },[]);
 
+    // function selectedProjects () {
+        
+    //     {
+    //         projectData && projectData.map((project, index) => (
+    //             return (
+    //             if ({project.projectType}==="client") {{
+    //         <article>
+    //             <h3>
+    //                 {project.title}
+    //             </h3>
+    //             <div>
+    //                 <span>
+    //                     {project.date}
+    //                 </span>
+    //                 <span>
+    //                     Company: {project.place}
+    //                 </span>
+    //                 <span>
+    //                     Type: {project.projectType}
+    //                 </span>
+    //                 <p>{project.description}</p>
+                    
+    //                 <span>
+    //                 </span>
+    //             </div>
+    //         </article>}
+    //             }
+    //     )))
+    //     }
+        
+    // }
+
     return (
         <main>
             <section>
@@ -52,6 +84,8 @@ export default function Project() {
                         </article>
                     ))
                     }
+                    <p>Hello</p>
+                    {/* {selectedProjects()} */}
                 </section>
             </section>
         </main>
