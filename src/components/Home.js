@@ -23,8 +23,25 @@ export default function Home() {
                     <Row>
                     <Col></Col>
                     <Col md={7} className="text-center">
-                        <p className="lead mt-5"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
-                        <Button> Press </Button>
+                        <p className="lead mt-5"> 
+                        {/* Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.  */}
+                        Thessaloniki is the Greek capital of Balkans, and the country’ s gastronomic and cultural capital.
+
+                        With her countless Byzantine churches and grand cathedrals, with her beautiful monasteries and Mount Athos close by, Thessaloniki is love at first sight.
+
+                        Is one of the largest student centers in South - Eastern Europe
+                        while 15 th of its monuments are included on the UNESCO World Heritage List when there are around 800 in the whole world!
+                        </p>
+                        < p className = "lead mt-5" >
+                            Whether you‘ re coming
+                        for a weekend, a week, as a student, or stay forever, our travel guide brings together the best of everything the city has to offer.Our mobile friendly website designed, to help you visit a clutch of sights in a sort space of time.Add inspiring photography, and the best suggestions of the locals, and you have the best travel companion
+                        for an unforgettable vacation.
+                        </p>
+                        < p className = "lead mt-5" >
+                        Discover the homeland of Saints, Apostles, heroes, leaders, and philosophers. Discover the city which is justifiably considered as an open - air museum of Byzantine art.Discover Thessaloniki.
+
+                        </p>
+                        {/* <Button> Press </Button> */}
                     </Col>
                     <Col></Col>
                     </Row>
