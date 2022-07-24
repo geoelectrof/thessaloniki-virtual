@@ -26,15 +26,17 @@ export default function SinglePost() {
             title,
             _id,
             slug,
+            tags,
+            description,
+            wheelchairAccess,
+            toiletFacilities,
             mainImage{
                 asset->{
                     _id,
                     url
                 }
             },
-            body,
-            "name": author->name, 
-            "authorImage": author->image
+            body
         }`).then((data) => setSinglePost(data[0]))
         .catch(console.error);
     }, [slug]);
@@ -45,18 +47,28 @@ export default function SinglePost() {
         <main>
             <article>
                 <Container>
-                    <header className="text-center py-5">
-                        <p className="mb-0 text-secondary samples-sub-title">MONUMENTS</p>
-                        <h1 className="h1 display-2 text-primary pb-3 samples-title">
-                            <span className="">Museum</span>
+                    <header className="text-center pt-5 pb-3">
+                        <p className="mb-0 text-secondary samples-sub-title">{singlePost.tags[0]}</p>
+                        <h1 className="h1 display-2 text-primary samples-title">
+                            <span className="">{singlePost.title}</span>
                         </h1>
+                        <p className="px-5 pt-2 text-secondary">{singlePost.description}</p>
                     </header>
-                    <Image src={thessalonikiView}  width="1440px" className="d-block m-auto img-fluid"/>
+                    <Image src={singlePost.mainImage.asset.url}  width="1440px" className="d-block m-auto img-fluid"/>
                     <section>
                     <Row className="justify-content-center  pb-5">
                         
-                        <Col lg={6}>
-                            <p className="lead mt-5"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+                        <Col lg={6} className="post-content">
+                            <p className="lead mt-5"> 
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+                            <BlockContent 
+                                className="img-fluid"
+                                blocks={singlePost.body}
+                                projectId="5gbfyp9t" 
+                                dataset="production"
+                                style={{color: "red"}}
+                            />
+                            </p>
                         </Col>
                         
                     </Row>
@@ -78,12 +90,12 @@ export default function SinglePost() {
                         <Col lg={2} className="mb-3">
                             <FaWheelchair size="3rem" className=""/>
                             <h3 className="h4">ACCESSIBILITY</h3>
-                            <p>Partially wheelchair accessible.</p>
+                            <p>{singlePost.wheelchairAccess}</p>
                         </Col>
                         <Col lg={2} className="mb-3">
                             <ImManWoman size="3rem" />
                             <h3 className="h4">TOILETS</h3>
-                            <p>Toilet facilities available</p>
+                            <p>{singlePost.toiletFacilities}</p>
                         </Col>
                     </Row>
                 </section>
@@ -105,7 +117,7 @@ export default function SinglePost() {
                 </Container>
 
 
-                <header>
+                {/* <header>
                     <div>
                         <div>
                             <h1> {singlePost.title} </h1>
@@ -128,7 +140,7 @@ export default function SinglePost() {
                         dataset="production"
                         style={{color: "red"}}
                     /> 
-                </div>
+                </div> */}
             </article>
         </main>
     )

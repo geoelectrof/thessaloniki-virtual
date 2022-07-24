@@ -41,11 +41,11 @@ export default {
       },
     },
     // {
-      //   name: 'categories',
-      //   title: 'Categories',
-      //   type: 'array',
-      //   of: [{type: 'reference', to: {type: 'category'}}],
-      // },
+    //   name: 'categories',
+    //     title: 'Categories',
+    //     type: 'array',
+    //     of: [{type: 'reference', to: {type: 'category'}}],
+    //   },
       {
         name: 'body',
         title: 'Body',
@@ -71,30 +71,54 @@ export default {
         ],
       },
     },
-    {
-      name: 'author',
-      title: 'Author',
-      type: 'reference',
-      to: {type: 'author'},
+      {
+        name: "toiletFacilities",
+        title: "Toilet Facilities",
+        type: "string",
+        options: {
+          list: [{
+            value: "Toilet Facilities Available",
+            title: "Toilet Facilities Available"
+          },
+          {
+            value: "NO Toilet Facilities Available",
+            title: "NO Toilet Facilities Available"
+          },
+        ],
+      },
     },
-  {
-    name: 'publishedAt',
-    title: 'Published at',
-    type: 'datetime',
-  },
+    {
+      title: "Useful Links",
+      name: "usefulLinks",
+      type: "array",
+      of: [{
+        type: "singleUsefulLink"
+      }]
+    },
+    {
+      name: 'publishedAt',
+      title: 'Published at',
+      type: 'datetime',
+    },
+    // {
+    //   name: 'author',
+    //   title: 'Author',
+    //   type: 'reference',
+    //   to: {type: 'author'},
+    // },
   ],
 
-  preview: {
-    select: {
-      title: 'title',
-      author: 'author.name',
-      media: 'mainImage',
-    },
-    prepare(selection) {
-      const {author} = selection
-      return Object.assign({}, selection, {
-        subtitle: author && `by ${author}`,
-      })
-    },
-  },
+  // preview: {
+  //   select: {
+  //     title: 'title',
+  //     author: 'author.name',
+  //     media: 'mainImage',
+  //   },
+  //   prepare(selection) {
+  //     const {author} = selection
+  //     return Object.assign({}, selection, {
+  //       subtitle: author && `by ${author}`,
+  //     })
+  //   },
+  // },
 }
