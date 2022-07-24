@@ -36,12 +36,26 @@ export default function SinglePost() {
                     url
                 }
             },
-            body
+            body,
+            usefulLinks,
         }`).then((data) => setSinglePost(data[0]))
         .catch(console.error);
     }, [slug]);
 
     if(!singlePost) return <div>Loading...</div>;
+
+    function usefulLinksShow () {
+        for (let i=0; i<singlePost.usefulLinks.length; i++) {
+            
+              return  (
+                <div>
+                    <h3 className="h5">{singlePost.usefulLinks[0].linkTitle}</h3>
+                    <a href="#" className="link-secondary">{singlePost.usefulLinks[0].linkUrl}</a>
+                    <hr />
+                </div>
+              )
+        }
+    }
 
     return (
         <main>
@@ -60,7 +74,7 @@ export default function SinglePost() {
                         
                         <Col lg={6} className="post-content">
                             <p className="lead mt-5"> 
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+                                {/* Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.  */}
                             <BlockContent 
                                 className="img-fluid"
                                 blocks={singlePost.body}
@@ -105,11 +119,16 @@ export default function SinglePost() {
                             <h2 className="font-weight-lighter text-center display-5 py-5 text-primary">
                                 Useful Links
                             </h2>
-                            <h3 className="h5">Archeological Museum of Thessaloniki</h3>
+                            {/* <h3 className="h5">Archeological Museum of Thessaloniki</h3>
                             <a href="#" className="link-secondary">www.archaeology.gr</a>
                             <hr />
                             <h3 className="h5">Archeological Museum of Thessaloniki</h3>
                             <a href="#" className="link-secondary">www.archaeology.gr</a>
+                            <p>{singlePost.usefulLinks[0].linkUrl}</p> */}
+                            <p>{usefulLinksShow()}</p>
+                            
+                                
+                             
                             
                         </Col>
                     </Row>
