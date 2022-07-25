@@ -85,6 +85,7 @@ export default function Project() {
                     ))
                     }
                     <p>Hello</p>
+                    {projectData[projectData.length-1].title}
                     {/* {selectedProjects()} */}
                 </section>
             </section>
