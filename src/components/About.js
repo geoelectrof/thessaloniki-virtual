@@ -2,6 +2,7 @@ import React, {useEffect, useState }  from "react";
 import sanityClient from "../client.js";
 import imageUrlBuilder from "@sanity/image-url";
 import BlockContent from "@sanity/block-content-to-react"
+import { Container, Row, Col } from 'react-bootstrap'
 
 export default function About() {
     const [author, setAuthor] = useState(null);
@@ -26,25 +27,58 @@ export default function About() {
 
     return (
         <main>
-            <img />
-            <div>
-                <section>
-                    <img src={urlFor(author.authorImage).url()} />
-                    <div>
-                        <h1> 
-                            Hey there. I'm{" "}
-                            <span>{author.name}</span>
-                        </h1>
+            <Container className="justify-center">
+                <h1 className="display-2 text-center my-5 ">About</h1>
+                <Row className = "justify-content-center  pb-5" >
+                    <Col lg={3}>
+                        <h2 className="display-5 text-center ">About the Creator</h2>
+                    </Col>
+                    <Col lg={4}>
+                        <img src={urlFor(author.authorImage).url()} className="img-fluid"/>
+                        <p>Hi, I am Dimitris.</p>
+                        <p>
+                            I am a Front - End Developer with UX in mind and a competent understanding in the principles of website design. Always willing to learn new technologies and implement in short time, both working independently and in a team.
+                        </p>
+                    </Col>
+                </Row>
+                <Row className = "justify-content-center  pb-5" >
+                    <Col lg={3}>
+                        <h2 className="display-5 text-center ">
+                            About <span className="font-weight-strong">"Thessaloniki Virtual Guide" </span>
+                        </h2>
+                    </Col>
+                    <Col lg={4}>
+                        <p>
+                            Thessaloniki Virtual Guide was made with love as the final project of SHA's front end developer bootcamp.
+                        </p>
+                        <p>
+                            The main technologies used to build this project are React, Bootstrap, and Sanity CMS.
+                        </p>
+                        <p>
+                            I would like to thank the SHA team members for their support and help the last 7 months.
+                        </p>
+                    </Col>
+                </Row>
+                <img />
+                <div>
+                    <section>
+                        <img src={urlFor(author.authorImage).url()} />
                         <div>
-                            <BlockContent 
-                                blocks = {author.bio}
-                                projectId = "5gbfyp9t"
-                                dataset = "production"
-                            />
+                            <h1> 
+                                Hey there. I'm{" "}
+                                <span>{author.name}</span>
+                            </h1>
+                            <div>
+                                <BlockContent 
+                                    blocks = {author.bio}
+                                    projectId = "5gbfyp9t"
+                                    dataset = "production"
+                                />
+                            </div>
                         </div>
-                    </div>
-                </section>
-            </div>
+                    </section>
+                </div>
+            </Container>
         </main>
     )
 }
