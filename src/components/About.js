@@ -29,19 +29,20 @@ export default function About() {
         <main>
             <Container className="justify-center">
                 <h1 className="display-2 text-center my-5 ">About</h1>
-                <Row className = "justify-content-center  pb-5" >
+                <Row className = "justify-content-center  py-5" >
                     <Col lg={3}>
                         <h2 className="display-5 text-center ">About the Creator</h2>
                     </Col>
                     <Col lg={4}>
-                        <img src={urlFor(author.authorImage).url()} className="img-fluid"/>
-                        <p>Hi, I am Dimitris.</p>
-                        <p>
-                            I am a Front - End Developer with UX in mind and a competent understanding in the principles of website design. Always willing to learn new technologies and implement in short time, both working independently and in a team.
-                        </p>
+                        {/* <img src={urlFor(author.authorImage).url()} className="img-fluid"/> */}
+                        <BlockContent 
+                                    blocks = {author.bio}
+                                    projectId = "5gbfyp9t"
+                                    dataset = "production"
+                                />
                     </Col>
                 </Row>
-                <Row className = "justify-content-center  pb-5" >
+                <Row className = "justify-content-center  py-5 mb-5" >
                     <Col lg={3}>
                         <h2 className="display-5 text-center ">
                             About <span className="font-weight-strong">"Thessaloniki Virtual Guide" </span>
@@ -59,7 +60,7 @@ export default function About() {
                         </p>
                     </Col>
                 </Row>
-                <img />
+                {/* <img />
                 <div>
                     <section>
                         <img src={urlFor(author.authorImage).url()} />
@@ -77,7 +78,7 @@ export default function About() {
                             </div>
                         </div>
                     </section>
-                </div>
+                </div> */}
             </Container>
         </main>
     )

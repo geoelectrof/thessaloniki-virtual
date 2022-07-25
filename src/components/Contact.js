@@ -173,19 +173,19 @@ export default function Contact() {
                                 {/* <p>
                                     <label>Your Name: <input type="text" name="name"/></label>
                                 </p> */}
-                                <label className="mb-0"><span className="text-danger">Your name*</span></label>
+                                <label className="mb-0"><span className="text-primary">Your name*</span></label>
                                 <input name="name" type="text" className="form-control" placeholder="Name" />
                                 
                                 {/* <p>
                                     <label>Your Email: <input type="email" name="email"/></label>
                                 </p> */}
-                                <label className="mb-0 mt-3"><span className="text-danger">Your Email*</span></label>
+                                <label className="mb-0 mt-3"><span className="text-primary">Your Email*</span></label>
                                 <input name="email" type="email" className="form-control" placeholder="Email" />
                                 
                                 {/* <p>
                                     <label>Message: <textarea name="message"></textarea></label>
                                 </p> */}
-                                <label className="mb-0 mt-3"><span className="text-danger">Your message</span></label>
+                                <label className="mb-0 mt-3"><span className="text-primary">Your message</span></label>
                                 <textarea name="message" type="text" className="form-control" placeholder="Message" />
                                 
                                 <p>
