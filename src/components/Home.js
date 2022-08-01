@@ -95,8 +95,8 @@ export default function Home() {
                             <Col md={6} className="py-3 pe-5 mr-5">
                                 <p className="mb-0 text-secondary samples-sub-title">{work.tags[0]}</p>
                                 <Link to={"/post/" + work.slug.current} key={work.slug.current} className="text-decoration-none">
-                                    <h3 className="h1 display-5 text-primary pb-3 samples-title">
-                                        <span className="border-bottom border-2 border-primary pb-1">
+                                    <h3 className = "h1 display-5 text-primary pb-3 samples-title" >
+                                        <span className = "border-bottom border-2 border-primary pb-1"  >
                                             {work.title}
                                         </span>
                                     </h3>
@@ -187,7 +187,7 @@ export default function Home() {
                             <Button variant="lg" className="bg-primary text-white rounded-0 px-5 py-2">
                                 <Link 
                                 to = "/post"
-                                activeClassName = "text-light"
+                                // activeClassName = "text-light"
                                 className = "nav-item nav-link text-decoration-none text-light" >
                                     VIEW ALL HIGHLIGHTS
                                 </Link>

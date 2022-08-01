@@ -58,13 +58,7 @@ export default function Footer(){
                             </ul>
                         </Col>
                         <Col md={3}>
-                            <h5 className="m-0 p-0">Useful links</h5>
-                            <NavLink 
-                                to = "/contact" 
-                                activeClassName = "text-primary"
-                                className = "nav-item nav-link text-light" >
-                                <FaHeart /> Thank You SHA
-                            </NavLink>
+                            <h5 className="m-0 p-0"> <a href="https://socialhackersacademy.org/" className="nav-item nav-link text-light"><FaHeart /> Thank You SHA</a></h5>
                         </Col>
                     </Row>
                 </Container>

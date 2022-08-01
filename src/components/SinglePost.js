@@ -105,11 +105,11 @@ export default function SinglePost() {
                         </Col>
                     </Row>
                     <Row className="justify-content-center text-center pb-5">
-                        <Col lg={2} className="mb-3">
+                        {/* <Col lg={2} className="mb-3">
                             <ImLocation size="3rem" />
                             <h3 className="h4">GPS</h3>
                             <p>70.69444912, 24.67410824</p>
-                        </Col>
+                        </Col> */}
                         <Col lg={2} className="mb-3">
                             <FaWheelchair size="3rem" className=""/>
                             <h3 className="h4">ACCESSIBILITY</h3>

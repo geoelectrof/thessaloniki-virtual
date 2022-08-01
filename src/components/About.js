@@ -30,7 +30,7 @@ export default function About() {
             <Container className="justify-center">
                 <h1 className="display-2 text-center my-5 ">About</h1>
                 <Row className = "justify-content-center  py-5" >
-                    <Col lg={3}>
+                    <Col lg={4}>
                         <h2 className="display-5 text-center ">About the Creator</h2>
                     </Col>
                     <Col lg={4}>
@@ -43,7 +43,7 @@ export default function About() {
                     </Col>
                 </Row>
                 <Row className = "justify-content-center  py-5 mb-5" >
-                    <Col lg={3}>
+                    <Col lg={4}>
                         <h2 className="display-5 text-center ">
                             About <span className="font-weight-strong">"Thessaloniki Virtual Guide" </span>
                         </h2>
