@@ -44,7 +44,7 @@ export default function SinglePost() {
         .catch(console.error);
     }, [slug]);
 
-    if(!singlePost) return <div>Loading...</div>;
+    if(!singlePost) return <div class="loader-container"><div class="loader"></div></div>;
 
     function usefulLinksShow () {
         for (let i=0; i<singlePost.usefulLinks.length; i++) {
