@@ -34,7 +34,6 @@ export default function About() {
                         <h2 className="display-5 text-center ">About the Creator</h2>
                     </Col>
                     <Col lg={4}>
-                        {/* <img src={urlFor(author.authorImage).url()} className="img-fluid"/> */}
                         <BlockContent 
                                     blocks = {author.bio}
                                     projectId = "5gbfyp9t"
@@ -60,25 +59,6 @@ export default function About() {
                         </p>
                     </Col>
                 </Row>
-                {/* <img />
-                <div>
-                    <section>
-                        <img src={urlFor(author.authorImage).url()} />
-                        <div>
-                            <h1> 
-                                Hey there. I'm{" "}
-                                <span>{author.name}</span>
-                            </h1>
-                            <div>
-                                <BlockContent 
-                                    blocks = {author.bio}
-                                    projectId = "5gbfyp9t"
-                                    dataset = "production"
-                                />
-                            </div>
-                        </div>
-                    </section>
-                </div> */}
             </Container>
         </main>
     )
