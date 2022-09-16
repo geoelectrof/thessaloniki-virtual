@@ -1,8 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-// import project from "../../thessaloniki/schemas/project.js";
-// import project from "../../thessaloniki/schemas/project.js";
-// import project from "../../thessaloniki/schemas/project.js";
 import sanityClient from "../client.js";
 
 export default function Project() {
@@ -22,38 +18,6 @@ export default function Project() {
         .then((data) => setProjectData(data))
         .catch(console.error);
     },[]);
-
-    // function selectedProjects () {
-        
-    //     {
-    //         projectData && projectData.map((project, index) => (
-    //             return (
-    //             if ({project.projectType}==="client") {{
-    //         <article>
-    //             <h3>
-    //                 {project.title}
-    //             </h3>
-    //             <div>
-    //                 <span>
-    //                     {project.date}
-    //                 </span>
-    //                 <span>
-    //                     Company: {project.place}
-    //                 </span>
-    //                 <span>
-    //                     Type: {project.projectType}
-    //                 </span>
-    //                 <p>{project.description}</p>
-                    
-    //                 <span>
-    //                 </span>
-    //             </div>
-    //         </article>}
-    //             }
-    //     )))
-    //     }
-        
-    // }
 
     return (
         <main>
@@ -86,7 +50,6 @@ export default function Project() {
                     }
                     <p>Hello</p>
                     {projectData[projectData.length-1].title}
-                    {/* {selectedProjects()} */}
                 </section>
             </section>
         </main>

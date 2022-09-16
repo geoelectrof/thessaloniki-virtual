@@ -1,18 +1,13 @@
 import React, { useEffect, useState} from "react";
 import { useParams } from "react-router-dom";
-
 import sanityClient from "../client.js";
 import imageUrlBuilder from "@sanity/image-url"
 import BlockContent from "@sanity/block-content-to-react"
-
 import { Container, Image, Row, Col, Button } from "react-bootstrap"
-import thessalonikiView from "./images\\thessaloniki-view.jpg"
 import { FaWheelchair } from "react-icons/fa"
 import { ImManWoman } from "react-icons/im"
-import { ImLocation } from "react-icons/im"
+// import { ImLocation } from "react-icons/im"
 import { FiExternalLink } from "react-icons/fi";
-
-
 
 const builder = imageUrlBuilder(sanityClient);
 function urlFor(source) {
@@ -83,7 +78,6 @@ export default function SinglePost() {
                         
                         <Col lg={6} className="post-content">
                             <p className="lead mt-5"> 
-                                {/* Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.  */}
                             <BlockContent 
                                 className="img-fluid"
                                 blocks={singlePost.body}
@@ -93,7 +87,6 @@ export default function SinglePost() {
                             />
                             </p>
                         </Col>
-                        
                     </Row>
                 </section>
                 < section className = "bg-light my-5" >
@@ -105,11 +98,6 @@ export default function SinglePost() {
                         </Col>
                     </Row>
                     <Row className="justify-content-center text-center pb-5">
-                        {/* <Col lg={2} className="mb-3">
-                            <ImLocation size="3rem" />
-                            <h3 className="h4">GPS</h3>
-                            <p>70.69444912, 24.67410824</p>
-                        </Col> */}
                         <Col lg={2} className="mb-3">
                             <FaWheelchair size="3rem" className=""/>
                             <h3 className="h4">ACCESSIBILITY</h3>
@@ -128,47 +116,11 @@ export default function SinglePost() {
                             <h2 className="font-weight-lighter text-center display-5 py-5 text-primary">
                                 Useful Links
                             </h2>
-                            {/* <h3 className="h5">Archeological Museum of Thessaloniki</h3>
-                            <a href="#" className="link-secondary">www.archaeology.gr</a>
-                            <hr />
-                            <h3 className="h5">Archeological Museum of Thessaloniki</h3>
-                            <a href="#" className="link-secondary">www.archaeology.gr</a>
-                            <p>{singlePost.usefulLinks[0].linkUrl}</p> */}
                             <p>{usefulLinksShow()}</p>
-                            
-                                
-                             
-                            
                         </Col>
                     </Row>
                 </section>
                 </Container>
-
-
-                {/* <header>
-                    <div>
-                        <div>
-                            <h1> {singlePost.title} </h1>
-                            <div>
-                                <img 
-                                src={urlFor(singlePost.authorImage).url()}
-                                // src={(singlePost.authorImage).url}
-                                width="200px"
-                                alt={singlePost.name} /></div>
-                                <p>{singlePost.name}</p>
-                        </div>
-                    </div>
-                    <img src={singlePost.mainImage.asset.url} width="400px" />
-                </header>
-                <div> 
-                    <BlockContent 
-                        className="blackBack"
-                        blocks={singlePost.body}
-                        projectId="5gbfyp9t" 
-                        dataset="production"
-                        style={{color: "red"}}
-                    /> 
-                </div> */}
             </article>
         </main>
     )
