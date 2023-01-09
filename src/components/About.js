@@ -35,10 +35,10 @@ export default function About() {
                     </Col>
                     <Col lg={4}>
                         <BlockContent 
-                                    blocks = {author.bio}
-                                    projectId = "5gbfyp9t"
-                                    dataset = "production"
-                                />
+                            blocks = {author.bio}
+                            projectId = "5gbfyp9t"
+                            dataset = "production"
+                        />
                     </Col>
                 </Row>
                 <Row className = "justify-content-center  py-5 mb-5" >
