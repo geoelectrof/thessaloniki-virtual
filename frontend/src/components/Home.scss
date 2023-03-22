@@ -1,0 +1,54 @@
+@import "../custom.scss";
+
+.teaser-block {
+    position: relative;
+}
+
+@include media-breakpoint-down(md){
+  .teaser-block-image {
+    // object-fit:cover;
+    height: auto;
+    width: auto;
+  }
+}
+
+.teaser {
+  position: relative;
+}
+
+.teaser-block {
+  position: absolute;
+  top: 0;
+}
+@include media-breakpoint-down(md) {
+  .teaser-block {
+    position: relative;
+  }
+}
+
+.teaser-block-content {
+    position: absolute;
+    top:40%;
+    left: 0;
+    right: 0;
+    background-color: white;
+    padding: 20px;
+    width: 400px;
+    margin: auto;
+}
+@include media-breakpoint-down(md) {
+  .teaser-block-content {
+    position: relative;
+    background-color:beige;
+    width: auto;
+    top:0;
+  }
+}
+
+.samples-sub-title {
+    letter-spacing: 4px;
+}
+
+.samples-title {
+  line-height: 4.5rem;
+}

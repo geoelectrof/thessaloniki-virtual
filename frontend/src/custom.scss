@@ -1,0 +1,13 @@
+$color-primary: rgb(212, 167, 17);
+
+
+/* make the customizations */
+$theme-colors: (
+    "primary": $color-primary,
+    "secondary": rgb(108,117,125),
+    "light": rgb(248,249,250),
+    "dark": #212529
+);
+
+/* import bootstrap to set changes */
+@import "~bootstrap/scss/bootstrap";
