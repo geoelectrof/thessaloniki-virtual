@@ -86,7 +86,7 @@ const Home = () => {
                   {work.tags[0]}
                 </p>
                 <Link
-                  to={"/post/" + work.slug.current}
+                  to={"/highlights/" + work.slug.current}
                   key={work.slug.current}
                   className="text-decoration-none"
                 >
@@ -151,7 +151,6 @@ const Home = () => {
             </Col>
           </Row>
         </section>
-
       </Container>
 
       <Button>press me</Button>
